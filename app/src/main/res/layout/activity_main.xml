@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <include
+        layout="@layout/toolbar"
+        android:id="@+id/toolbar"
+        />
+
+    <HorizontalScrollView
+        android:id="@+id/filtersToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/businessButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Business"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/entertainmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Entertainment"
+                android:onClick="onClick"
+                tools:ignore="HardcodedText"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/environmentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Environment"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/foodButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Food"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/healthButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Health"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/politicsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Politics"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/scienceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Science"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/sportsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Sports"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/technologyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Technology"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/topButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="Top"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/worldButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:text="World"
+                android:onClick="onClick"
+                style="?android:attr/buttonBarButtonStyle"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/nextPageBtn"/>
+
+        <Button
+            android:id="@+id/nextPageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Next Page!"
+            android:onClick="loadNextPage"
+            android:layout_margin="5dp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+</LinearLayout>

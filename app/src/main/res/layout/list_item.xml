@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="108dp"
+        android:layout_height="73dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        android:contentDescription="Article Image"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/article_image"
+        android:maxLines="3"
+        android:padding="7dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        tools:text="Bing Chilling" />
+
+    <TextView
+        android:id="@+id/article_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_title"
+        android:layout_alignStart="@id/article_title"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textColor="#757575"
+        android:textSize="15sp"
+        tools:text="BBC News" />
+
+    <TextView
+        android:id="@+id/article_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/article_source"
+        android:maxLines="3"
+        android:padding="5dp"
+        android:textColor="#757575"
+        android:textSize="13sp"
+        tools:text="Eum reiciendis voluptas. Ex totam deserunt repellat cumque iusto nobis praesentium eius harum." />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:padding="5dp"/>
+</RelativeLayout>
+
